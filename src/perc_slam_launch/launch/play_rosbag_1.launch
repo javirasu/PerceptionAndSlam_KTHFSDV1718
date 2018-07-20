@@ -2,7 +2,7 @@
 <!-- plays the trimmed rosbag (without zed topics) -->
   <param name ="/use_sim_time" value="true"/>
 
-  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 1 --clock $(find perc_slam_launch)/rosbags/trimmed_rosbag_2018-07-06-15-57-15.bag" launch-prefix="xterm -e" />
+  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 1 --clock $(find perc_slam_launch)/rosbags/trimmed_rosbag_2018-07-06-16-12-05.bag" launch-prefix="xterm -e" />
 
   <!-- Transforms ZED -->
   <node pkg="tf" type="static_transform_publisher" name="per_zed_1" args="0 0.06 0 0 0 0 1 zed_center zed_left_camera  100" />
