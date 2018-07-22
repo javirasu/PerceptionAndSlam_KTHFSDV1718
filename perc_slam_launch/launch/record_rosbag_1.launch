@@ -5,7 +5,7 @@
   <param name ="/use_sim_time" value="true"/>
   -->
 
-  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 1 --clock $(find perc_slam_launch)/rosbags/zed_imu_rosbag_2018-06-28-15-52-07.bag" launch-prefix="xterm -e" />
+  <node pkg="rosbag" type="play" name="player" output="screen" args="-r 1 --clock $(find perc_slam_launch)/rosbags/zed_imu_rosbag_2018-06-28-15-45-11.bag" launch-prefix="xterm -e" />
 
   <!-- Transforms ZED -->
   <node pkg="tf" type="static_transform_publisher" name="per_zed_1" args="0 0.06 0 0 0 0 1 zed_center zed_left_camera  100" />
@@ -31,7 +31,7 @@
 
   <!-- Robot localization package -->
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" clear_params="true" >
-    <rosparam command="load" file="$(find robot_localization)/params/ekf_fixed.yaml" />
+    <rosparam command="load" file="$(find robot_localization)/params/ekf_zed_odom.yaml" />
   </node>
 
   <!-- Perception pipeline -->
@@ -49,6 +49,6 @@
 
   <!-- record new rosbag -->
   <node pkg="rosbag" type="record" name="rosbag_record_diag"
-       args="record -o $(find perc_slam_launch)/rosbags/trimmed_rosbag  /zed/odom /perception_cones /imu/data"/>  
+       args="record -o $(find perc_slam_launch)/rosbags/navigation_rosbag  /reactive_cones"/>  
 
 </launch>

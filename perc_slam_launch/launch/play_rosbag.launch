@@ -28,7 +28,7 @@
 
   <!-- Robot localization package -->
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_localization" clear_params="true" >
-    <rosparam command="load" file="$(find robot_localization)/params/ekf_fixed.yaml" />
+    <rosparam command="load" file="$(find robot_localization)/params/ekf_zed_odom.yaml" />
   </node>
 
   <!-- Perception pipeline -->
