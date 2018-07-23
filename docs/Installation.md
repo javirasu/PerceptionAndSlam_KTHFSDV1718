@@ -34,8 +34,24 @@ becomes
 
 Now, we can finally install Tensorflow GPU. We recommend using [Native pip](https://www.tensorflow.org/install/install_linux#InstallingNativePip) method. 
 
-Install pip: 'sudo apt-get install python-pip'
+Install pip: `sudo apt-get install python-pip`
 
-Install tensorflow (same version as is on Jetson TX2): 'pip install tensorflow-gpu == 1.6'
+Install tensorflow (same version as is on Jetson TX2): `pip install tensorflow-gpu == 1.6`
 
-**NOTE!!** Throughout course of development, it's highly recommended to stick to one version of python (either 2 or 3). We recommend installing everything for python 2 as it doesn't cause clashes with ROS down the line.
+**NOTE:** Throughout course of development, it's highly recommended to stick to one version of python (either 2 or 3). **We recommend installing everything for python 2** as it doesn't cause clashes with ROS down the line.
+
+## Tensorflow Object Detection API
+Clone the Tensorflow models repository. It's awesome!
+
+`git clone https://github.com/tensorflow/models` 
+
+Install [all dependencies](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md
+) for object detection api.
+
+**Potential issues**
+
+- There might be a need to update protobuf drivers. [Follow this](https://gist.github.com/sofyanhadia/37787e5ed098c97919b8c593f0ec44d8)
+- https://github.com/tensorflow/models/issues/4002
+- while adding libraries to python path, change pwm to exact path, eg:
+`export PYTHONPATH="${PYTHONPATH}:/home/ajinkya/models/research:/home/ajinkya/models/research/slim/"`
+
