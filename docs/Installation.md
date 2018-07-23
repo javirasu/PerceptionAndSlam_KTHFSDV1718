@@ -55,3 +55,5 @@ Install [all dependencies](https://github.com/tensorflow/models/blob/master/rese
 - while adding libraries to python path, change pwm to exact path, eg:
 `export PYTHONPATH="${PYTHONPATH}:/home/ajinkya/models/research:/home/ajinkya/models/research/slim/"`
 
+## ROS
+[Install ROS](http://wiki.ros.org/kinetic/Installation/Ubuntu) (Robot Operating System) and check this handy [tutorial series](https://youtu.be/ehtUb55Rmmg) to learn how to use it!
