@@ -65,12 +65,15 @@ Most of the software we need is installed. Now we'll look at how to run the code
 All our code would reside in what is called a [catkin workspace](http://wiki.ros.org/catkin/workspaces). To create a workspace, follow [this link](http://wiki.ros.org/catkin/Tutorials/create_a_workspace) 
 
 `mkdir -p ~/PerceptionAndSlam_KTHFSDV1718
+
 cd ~/PerceptionAndSlam_KTHFSDV1718/
+
 catkin_make`
 
 Next
 
 `cd ~/PerceptionAndSlam_KTHFSDV1718/
+
 git clone https://github.com/javirrs/PerceptionAndSlam_KTHFSDV1718.git`
 
 This creates a folder named 'PerceptionAndSlam_KTHFSDV1718' inside our catkin workspace (which for now is also called PerceptionAndSlam_KTHFSDV1718). Now rename thie inner folder from PerceptionAndSlam_KTHFSDV1718 to 'src' (source, as this is where our source code will reside). 
@@ -88,6 +91,7 @@ There are a few additional wrappers needed. Just look at the error when running 
 Finally, 
 
 `cd ~/PerceptionAndSlam_KTHFSDV1718/
+
 catkin_make`
 
 ## Launching the Program
@@ -96,7 +100,9 @@ We're here. Congratulations on reaching this far! To launch the program we use s
 Now, before ros can recognize all packages in our workspace, we need to source our workspace to .bashrc. 
 
 `cd ~/PerceptionAndSlam_KTHFSDV1718/
+
 echo  'source devel/setup.bash' >> ~/.bashrc
+
 source ~/.bashrc`
 
 Next time onwards, ros will know the contents of our workspace. Now finally, run
