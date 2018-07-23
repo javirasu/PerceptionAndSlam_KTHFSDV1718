@@ -5,7 +5,7 @@ Welcome to the perception and slam system of the KTH Formula Student Driverless 
 When the first ever KTH FSD team assembled in Sep 2017, we were working with a clean slate. We had no idea where to even start. We hope that this repository would serve as a solid base for next batch of FSD enthusiasts!
 
 ## Installation
-Refer to Installation for a detailed list of dependencies and instructions
+Refer to [Installation](docs/Installation.md) for a detailed list of dependencies and instructions
 
 ## Description 
 This section outlines the flow of logic in the system. For a detailed description of every node, follow the links below:
