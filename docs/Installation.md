@@ -57,3 +57,54 @@ Install [all dependencies](https://github.com/tensorflow/models/blob/master/rese
 
 ## ROS
 [Install ROS](http://wiki.ros.org/kinetic/Installation/Ubuntu) (Robot Operating System) and check this handy [tutorial series](https://youtu.be/ehtUb55Rmmg) to learn how to use it!
+
+# Running Instructions
+Most of the software we need is installed. Now we'll look at how to run the code.
+
+## Create a Workspace
+All our code would reside in what is called a [catkin workspace](http://wiki.ros.org/catkin/workspaces). To create a workspace, follow [this link](http://wiki.ros.org/catkin/Tutorials/create_a_workspace) 
+
+`mkdir -p ~/PerceptionAndSlam_KTHFSDV1718
+cd ~/PerceptionAndSlam_KTHFSDV1718/
+catkin_make`
+
+Next
+
+`cd ~/PerceptionAndSlam_KTHFSDV1718/
+git clone https://github.com/javirrs/PerceptionAndSlam_KTHFSDV1718.git`
+
+This creates a folder named 'PerceptionAndSlam_KTHFSDV1718' inside our catkin workspace (which for now is also called PerceptionAndSlam_KTHFSDV1718). Now rename thie inner folder from PerceptionAndSlam_KTHFSDV1718 to 'src' (source, as this is where our source code will reside). 
+
+## More Installations!
+We're not done yet! To run various sensors with our system we need to install ros-wrappers for them. A ros-wrapper is a ros package with pre-written code supplied by manufacturers/open-source heros. This makes our life easier when interfacing with the sensors. We'll see how. Install these wrappers by cloning their repos in the src folder.
+- [Zed camera](https://github.com/stereolabs/zed-ros-wrapper)
+- [VLP 16 Lidar](http://wiki.ros.org/velodyne/Tutorials/Getting%20Started%20with%20the%20Velodyne%20VLP16)
+- [Xsens imu and gps](https://github.com/xsens/xsens_mti_ros_node)
+
+There are a few additional wrappers needed. Just look at the error when running catkin_make (we'll get to it soon), google them and clone their github repos in src
+- [uuid_msgs](https://github.com/ros-geographic-info/unique_identifier)
+- [geographic_msgs](https://github.com/ros-geographic-info/geographic_info)
+
+Finally, 
+
+`cd ~/PerceptionAndSlam_KTHFSDV1718/
+catkin_make`
+
+## Launching the Program
+We're here. Congratulations on reaching this far! To launch the program we use something called a .launch file. You can imagine it as being a file containing launch sequence for a rocket-launch. All the launch files are to be kept in *perc_slam_launch* package. This package contains two folders, *launch* and *rosbags*. A rosbag is like a video file, but instead of a video, it has the ability to record all (or chosen) ros topics. These can then be played back and we can run innumerable experiments on them! 
+
+Now, before ros can recognize all packages in our workspace, we need to source our workspace to .bashrc. 
+
+`cd ~/PerceptionAndSlam_KTHFSDV1718/
+echo  'source devel/setup.bash' >> ~/.bashrc
+source ~/.bashrc`
+
+Next time onwards, ros will know the contents of our workspace. Now finally, run
+
+`roslaunch perc_slam_launch play_rosbag.launch`
+
+to play one of the rosbags, or connect all the sensors and run
+
+`roslaunch perc_slam_launch perc_slam.launch`
+
+to run the system on live sensor data.
