@@ -9,9 +9,9 @@ Refer to [Installation](docs/Installation.md) for a detailed list of dependencie
 
 ## Description 
 This section outlines the flow of logic in the system. For a detailed description of every node, follow the links below:
--	Perception
--	Localization
--	Mapping
+-	[Perception](docs/perception.md)
+-	[Localization](docs/localization.md)
+-	[Mapping](mapping.md)
 -	Visualization
 
 <p align="center">
