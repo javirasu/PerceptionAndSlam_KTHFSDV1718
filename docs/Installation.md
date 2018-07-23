@@ -56,7 +56,7 @@ Install [all dependencies](https://github.com/tensorflow/models/blob/master/rese
 `export PYTHONPATH="${PYTHONPATH}:/home/ajinkya/models/research:/home/ajinkya/models/research/slim/"`
 
 ## ROS
-[Install ROS](http://wiki.ros.org/kinetic/Installation/Ubuntu) (Robot Operating System) and check this handy [tutorial series](https://youtu.be/ehtUb55Rmmg) to learn how to use it!
+[Install ROS](http://wiki.ros.org/kinetic/Installation/Ubuntu) (Robot Operating System) and check this handy [tutorial series](https://www.youtube.com/playlist?list=PLk51HrKSBQ8-jTgD0qgRp1vmQeVSJ5SQC) to learn how to use it!
 
 # Running Instructions
 Most of the software we need is installed. Now we'll look at how to run the code.
