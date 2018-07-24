@@ -38,5 +38,13 @@ The **rviz_visualizer** node takes the output of all the nodes and plots them in
 
 ## Citation
 
+
+    @Misc{gpy2014,
+      author =   {{GPy}},
+      title =    {{GPy}: A Gaussian process framework in python},
+      howpublished = {\url{http://github.com/SheffieldML/GPy}},
+      year = {since 2012}
+    }
+    
 ## License
 [GNU AGPL v3.0](LICENSE)
