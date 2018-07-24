@@ -40,9 +40,9 @@ The **rviz_visualizer** node takes the output of all the nodes and plots them in
 
 
     @Misc{gpy2014,
-      author =   {{GPy}},
-      title =    {{GPy}: A Gaussian process framework in python},
-      howpublished = {\url{http://github.com/SheffieldML/GPy}},
+      author =   {{Rasines, Javier and Khoche, Ajinkya}},
+      title =    {Perception and SLAM for FormulaStudent 17/18 competition},
+      howpublished = {\url{https://github.com/javirrs/PerceptionAndSlam_KTHFSDV1718}},
       year = {since 2012}
     }
     
