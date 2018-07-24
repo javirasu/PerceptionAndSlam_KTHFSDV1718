@@ -39,7 +39,7 @@ The **rviz_visualizer** node takes the output of all the nodes and plots them in
 ## Citation
 
 
-    @Misc{gpy2014,
+    @Misc{FS_1718,
       author =   {{Rasines, Javier and Khoche, Ajinkya}},
       title =    {Perception and SLAM for FormulaStudent 17/18 competition},
       howpublished = {\url{https://github.com/javirrs/PerceptionAndSlam_KTHFSDV1718}},
