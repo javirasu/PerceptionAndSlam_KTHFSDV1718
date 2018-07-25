@@ -9,7 +9,13 @@ For installation of Ubuntu on MSI (team laptop), follow [this tutorial](https://
 - Check cuda verison by typing `nvcc -- version` on a terminal. 
 - Download [cuda drivers](https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork
 ) from Nvidia website and follow their installation instructions. 
-- For command 4, `sudo apt-get install cuda` becomes `sudo apt-get install cuda-9-0`
+- For command 4, 
+
+`sudo apt-get install cuda` 
+
+becomes 
+
+`sudo apt-get install cuda-9-0`
 
 ## Tensorflow
 We'll use Tensorflow GPU. First, [install dependencies](https://www.tensorflow.org/install/install_linux#tensorflow_gpu_support) for it. Cuda toolkit and Nvidia drivers were already installed in sections above. 
@@ -36,7 +42,7 @@ Now, we can finally install Tensorflow GPU. We recommend using [Native pip](http
 
 Install pip: `sudo apt-get install python-pip`
 
-Install tensorflow (same version as is on Jetson TX2): `pip install tensorflow-gpu == 1.6`
+Install tensorflow (you might want same version as on Embedded computer/Jetson TX2): `pip install tensorflow-gpu == 1.8`
 
 **NOTE:** Throughout course of development, it's highly recommended to stick to one version of python (either 2 or 3). **We recommend installing everything for python 2** as it doesn't cause clashes with ROS down the line.
 
@@ -53,6 +59,7 @@ Install [all dependencies](https://github.com/tensorflow/models/blob/master/rese
 - There might be a need to update protobuf drivers. [Follow this](https://gist.github.com/sofyanhadia/37787e5ed098c97919b8c593f0ec44d8)
 - https://github.com/tensorflow/models/issues/4002
 - while adding libraries to python path, change pwm to exact path, eg:
+
 `export PYTHONPATH="${PYTHONPATH}:/home/ajinkya/models/research:/home/ajinkya/models/research/slim/"`
 
 ## ROS
@@ -64,17 +71,17 @@ Most of the software we need is installed. Now we'll look at how to run the code
 ## Create a Workspace
 All our code would reside in what is called a [catkin workspace](http://wiki.ros.org/catkin/workspaces). To create a workspace, follow [this link](http://wiki.ros.org/catkin/Tutorials/create_a_workspace) 
 
-`mkdir -p ~/PerceptionAndSlam_KTHFSDV1718
+`mkdir -p ~/PerceptionAndSlam_KTHFSDV1718`
 
-cd ~/PerceptionAndSlam_KTHFSDV1718/
+`cd ~/PerceptionAndSlam_KTHFSDV1718/`
 
-catkin_make`
+`catkin_make`
 
 Next
 
-`cd ~/PerceptionAndSlam_KTHFSDV1718/
+`cd ~/PerceptionAndSlam_KTHFSDV1718/`
 
-git clone https://github.com/javirrs/PerceptionAndSlam_KTHFSDV1718.git`
+`git clone https://github.com/javirrs/PerceptionAndSlam_KTHFSDV1718.git`
 
 This creates a folder named 'PerceptionAndSlam_KTHFSDV1718' inside our catkin workspace (which for now is also called PerceptionAndSlam_KTHFSDV1718). Now rename thie inner folder from PerceptionAndSlam_KTHFSDV1718 to 'src' (source, as this is where our source code will reside). 
 
@@ -90,20 +97,20 @@ There are a few additional wrappers needed. Just look at the error when running 
 
 Finally, 
 
-`cd ~/PerceptionAndSlam_KTHFSDV1718/
+`cd ~/PerceptionAndSlam_KTHFSDV1718/`
 
-catkin_make`
+`catkin_make`
 
 ## Launching the Program
 We're here. Congratulations on reaching this far! To launch the program we use something called a .launch file. You can imagine it as being a file containing launch sequence for a rocket-launch. All the launch files are to be kept in *perc_slam_launch* package. This package contains two folders, *launch* and *rosbags*. A rosbag is like a video file, but instead of a video, it has the ability to record all (or chosen) ros topics. These can then be played back and we can run innumerable experiments on them! 
 
 Now, before ros can recognize all packages in our workspace, we need to source our workspace to .bashrc. 
 
-`cd ~/PerceptionAndSlam_KTHFSDV1718/
+`cd ~/PerceptionAndSlam_KTHFSDV1718/`
 
-echo  'source devel/setup.bash' >> ~/.bashrc
+`echo  'source devel/setup.bash' >> ~/.bashrc`
 
-source ~/.bashrc`
+`source ~/.bashrc`
 
 Next time onwards, ros will know the contents of our workspace. Now finally, run
 
