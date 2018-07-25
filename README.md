@@ -4,19 +4,14 @@ Welcome to the perception and slam system of the KTH Formula Student Driverless 
 
 When the first ever KTH FSD team assembled in Sep 2017, we were working with a clean slate. We had no idea where to even start. We hope that this repository would serve as a solid base for next batch of FSD enthusiasts!
 
-## Installation
-Refer to [Installation](docs/Installation.md) for a detailed list of dependencies and instructions
-
 ## Description 
 This section outlines the flow of logic in the system. For a detailed description of every node, follow the links below:
 -	[Perception](docs/perception.md)
 -	[Localization](docs/localization.md)
--	[Mapping](mapping.md)
+-	[Mapping](docs/mapping.md)
 -	Visualization
 
-<p align="center">
-  <img src="docs/perc_slam_architecture1.png" width=879 height=393>
-</p>
+![alt text](docs/perc_slam_architecture1.png)
 
 In the figure shown above, every blue box is a _ros package_. Every ros package contains a _ros node_, henceforth referred to as a _node_ or _block_. The text above every arrow is a _ros topic_. To start off, we have the following array of sensors:
 -	A zed stereo camera. It publishes colored and depth images (a depth image is a 2D image with value of every pixel equal to the depth calculated by disparity of stereo camera).
@@ -35,6 +30,15 @@ The **reactive_mapping** node takes detected cones as input. It performs first l
 The **global_mapping** node takes reactive map as input and performs second level of filtering/outlier rejection. It publishes a global map (i.e. a map containing all the cones, the car and with origin being the position of center of mass of the car at t = 0).
 
 The **rviz_visualizer** node takes the output of all the nodes and plots them in rviz, a handy visualization tool provided by ros.
+
+## Get Started
+Are you completely new to the world of Driverless cars? Check out some [Tutorials](docs/Tutorials.md) to get started 
+
+## Installation
+Refer to [Installation](docs/Installation.md) for a detailed list of dependencies and instructions
+
+## Demos
+Watch some cool [videos](docs/Demos.md) showing our incremental progress. 
 
 ## Citation
 
