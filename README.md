@@ -1,4 +1,4 @@
-# PerceptionAndSlam_KTHFSDV1718
+# Perception and SLAM for Formula Student Competition 17/18
 ## Background
 Welcome to the perception and slam system of the KTH Formula Student Driverless project for the year 2017-18! So, what do we mean by *Perception* and *Slam*? Imagine a self-driving race car standing on an endurance track of FSD. The first thing car needs to do is to ‘perceive’ traffic cone landmarks. We use zed stereo camera as our perception sensor. After the cones have been detected, the car needs to plot them on a map and simultaneously needs to find its global position in the map, which is called SLAM (Simultaneous Localization & Mapping). The map information can be used by navigation team for path-planning and actuation. 
 
@@ -45,7 +45,7 @@ Watch some cool [videos](docs/Demos.md) showing our incremental progress.
 
     @Misc{FS_1718,
       author =   {{Rasines, Javier and Khoche, Ajinkya}},
-      title =    {Perception and SLAM for FormulaStudent 17/18 competition},
+      title =    {Perception and SLAM for Formula Student Competition 17/18},
       howpublished = {\url{https://github.com/javirrs/PerceptionAndSlam_KTHFSDV1718}},
       year = {2017/2018}
     }
